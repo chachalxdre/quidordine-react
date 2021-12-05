@@ -1,13 +1,252 @@
-body {
+html, body
+{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   margin: 0;
+  background-color: #FFFFFF;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color:#FFFFFF;
 }
 
-code {
+code 
+{
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Container{
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #000000;
+  width: 100%;
+}
+
+.Container h1{
+  position: relative;
+  font-size: 48px;
+  z-index: 1;
+}
+
+.Container h1:after
+{
+  position: absolute;
+  left: 0;
+  right: 0;
+  content: "";
+  height: 40px;
+  background: #C7F2C6;
+  top: 65%;
+  z-index: -1;
+}
+
+.ResultsContainer{
+  border-radius: 24px;
+  background-color: #FFFFFF;
+  width: 90%;
+  box-shadow: 0px 4px 50px 2px rgba(0, 0, 0, 0.05);
+  padding: 32px;
+  margin: 64px;
+}
+
+.RecipeContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.RecipeActions{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 0 32px;
+}
+
+.RecipeActions h2 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.RecipeShowResults{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 16px;
+}
+
+.RecipeShowResults a
+{
+  background-color: #FF430A;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+/*************************/
+/*************************/
+/*********FOOTER**********/
+/*************************/
+/*************************/
+
+.Footer
+{
+  background-color: #FF7247;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.FooterLogo
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.FooterLogo:after
+{
+  position: absolute;
+  left: 0;
+  right: 0;
+  content: "";
+  height: 1px;
+  background: #FFFFFF;
+  top: 50%;
+  z-index: 0;
+}
+
+.LogoImage
+{
+  margin: 16px;
+  background-color: #FF7247;
+  z-index: 1;
+}
+
+.FooterLinks
+{
+  margin: 16px;
+}
+
+.navActive
+{
+  color: #FFFFFF;
+  margin: 24px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.SocialNetworks img
+{
+  max-width: 24px;
+  padding: 16px 32px;
+}
+
+/*************************/
+/*************************/
+/*******RECIPE CARD*******/
+/*************************/
+/*************************/
+
+.RecipeCardContainer
+{
+  display: flex;
+  flex-direction: row;
+  background-color: #FFFFFF;
+  border: solid 2px #EEEEEE;
+  color: #000000;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  margin: 16px;
+}
+
+.RecipeCardImage
+{
+  height: 150px;
+}
+
+.RecipeImage
+{
+  max-height: 100%;
+}
+
+.RecipeCardContentContainer
+{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;;
+  width: 100%;
+}
+
+.RecipeContent
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+}
+
+.RecipeTitle
+{
+  display:flex;
+  flex-direction: row;
+  align-content: baseline;
+  justify-content:space-between;
+  font-size: 16px;
+  line-height: 8px;
+  margin: 0 16px;
+}
+
+.HeartIcon
+{
+  width: 32px;
+  right: 0;
+  align-self: center;
+}
+
+.RecipeCategories
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 16px;
+}
+
+.Category
+{
+  margin: 4px;
+  padding: 8px;
+  background-color: #D7D7D7;
+  border-radius: 24px;
+  line-height: 10px;
+  font-size: 14px;
+}
+
+.RecipeAddMenu
+{
+  display:flex;
+  flex-direction: row;
+  justify-content:right;
+  margin: 16px;
+}
+
+.RecipeAddMenu a
+{
+  background-color: #8FE48E;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
