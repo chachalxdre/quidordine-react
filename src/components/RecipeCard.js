@@ -1,5 +1,4 @@
 import React from 'react';
-/*import LogoQuidordine from '../components/Logo';*/
 import HeartIcon from '../images/IconHeart.png'
 import Bouillabaisse from '../images/bouillabaisse.jpg'
 import "../index.css"

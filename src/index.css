@@ -20,7 +20,209 @@ code
     monospace;
 }
 
-.Container{
+
+/*************************/
+/*************************/
+/********HOMEPAGE*********/
+/*************************/
+/*************************/
+
+.BackgroundImageHomepage{
+  overflow: hidden;
+  position: absolute;
+  top: -12%;
+  right: -20%;
+  z-index: -1;
+}
+
+.HomepageContainer{
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  align-items : left;
+  background: #FFFFFF;
+  color: #000000;
+  width: 100%;
+  z-index: 1;
+}
+
+.HomepageTitle{
+  margin: 128px;
+  color: #000000;
+  width: 35%;
+  margin-bottom: 128px;
+}
+
+.HomepageTitle h1{
+  font-size: 72px;
+}
+
+.HomepageTitle h2{
+  font-size: 30px;
+}
+
+.SimpleSearchInput{
+  font-size: 16px;
+  padding: 16px;
+  border: none;
+  border-bottom: solid 1px #D7D7D7;
+  width: 80%;
+}
+
+.SimpleSearchInput:focus{
+  border: none;
+  border-bottom: solid 2px #FF430A;
+  outline: none;
+}
+
+/* Recommended recipes */
+
+.RecommendationsContainer{
+  display: flex;
+  flex-direction: column;
+  margin: 64px 128px;
+  padding: 32px;
+  box-shadow: 0px 4px 50px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 24px;
+  background-color: #FFFFFF;
+}
+
+.RecommendationsContainer h3{
+  font-size: 48px;
+  margin: 0;
+}
+
+.RecommendationsContainer span{
+  font-size: 16px;
+  margin: 8px;
+}
+
+.RecommendedRecipes{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.RecommendedItem{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px;
+  width: 100%;
+}
+
+.RecommendedRecipeImage{
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+}
+
+/* Best recipes */
+
+
+.BestContainer{
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.BestContainer h3{
+  font-size: 48px;
+  margin: 16px 128px;
+}
+
+.BestRecipes{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.BestItem{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px;
+  width: 100%;
+  transform: skew(-13deg);
+  -webkit-transform: skew(-13deg);
+  -moz-transform: skew(-13deg);
+  position: relative;
+  text-align: center;
+  color: #FFFFFF;
+  /* -webkit-animation: scale-up-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: scale-up-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; */
+}
+/* 
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+} */
+
+
+.BestItem span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+.BestItem span::after{
+  visibility: visible;
+}
+
+.BestRecipeImage{
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+}
+
+/* Favorite recipes */
+.FavoritesContainer{
+  border-radius: 24px;
+  background-color: #FFFFFF;
+  width: 90%;
+  padding: 32px;
+  margin: 64px;
+}
+
+.FavoritesContainer h3{
+  font-size: 48px;
+  margin: 16px 128px;
+}
+
+/*************************/
+/*************************/
+/**RECETTES ET RESULTATS**/
+/*************************/
+/*************************/
+
+.PageRecettesContainer{
   background-color: #FFFFFF;
   display: flex;
   justify-content: center;
@@ -30,13 +232,13 @@ code
   width: 100%;
 }
 
-.Container h1{
+.PageRecettesContainer h1{
   position: relative;
   font-size: 48px;
   z-index: 1;
 }
 
-.Container h1:after
+.PagesRecettesContainer h1:after
 {
   position: absolute;
   left: 0;
@@ -46,6 +248,48 @@ code
   background: #C7F2C6;
   top: 65%;
   z-index: -1;
+}
+
+.SearchBarContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  font-size: 16px;
+}
+
+.SearchBar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.SearchInput{
+  font-size: 16px;
+  margin: 64px 0 0 0;
+  padding: 16px;
+  border: none;
+  border-bottom: solid 1px #D7D7D7;
+}
+
+.SearchInput:focus{
+  border: none;
+  border-bottom: solid 2px #FF430A;
+  outline: none;
+}
+
+.SearchBarFilters{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.Filters a{
+  margin: 8px;
+  font-size: 14px;
 }
 
 .ResultsContainer{
@@ -82,6 +326,7 @@ code
   justify-content: center;
   align-items: center;
   margin: 16px;
+  color: #FFFFFF;
 }
 
 .RecipeShowResults a
@@ -175,6 +420,7 @@ code
 
 .RecipeCardImage
 {
+  object-fit: cover;
   height: 150px;
 }
 
@@ -250,3 +496,133 @@ code
   font-size: 16px;
 }
 
+/*************************/
+/*************************/
+/*******RECIPE PAGE*******/
+/*************************/
+/*************************/
+
+.RecipePageContainer{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items : center;
+  background: #FFFFFF;
+  color: #000000;
+  width: 100%;
+  z-index: 1;
+}
+
+.BackgroundImageRecipePage{
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.RecipePage{
+  margin-top: 256px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 50px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 100px 100px 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.RecipePageContentContainer
+{
+  margin: 92px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;;
+  width: 100%;
+}
+
+.RecipePageTitle
+{
+  display:flex;
+  flex-direction: row;
+  align-content: baseline;
+  justify-content:space-between;
+  font-size: 32px;
+  line-height: 8px;
+  margin: 0 16px;
+}
+
+.HeartIcon
+{
+  width: 32px;
+  right: 0;
+  align-self: center;
+}
+
+.RecipePageCategories
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 16px;
+}
+
+.PageCategory
+{
+  margin: 4px;
+  padding: 8px;
+  background-color: #D7D7D7;
+  border-radius: 24px;
+  line-height: 10px;
+  font-size: 14px;
+}
+
+.RecipePageIngredientsContainer h3{
+  margin: 0 16px;
+  font-size: 32px
+}
+
+.RecipePageIngredients{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+}
+
+.IngredientItem{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 16px;
+}
+
+.IngredientImage{
+  object-fit: cover;
+  width: 92px;
+  height: 92px;
+  border-radius: 8px;
+}
+
+.RecipePageStepsContainer h3{
+  margin: 0 16px;
+  font-size: 32px
+}
+
+.RecipePageSteps{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+}
+
+.StepItem{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 16px;
+}
